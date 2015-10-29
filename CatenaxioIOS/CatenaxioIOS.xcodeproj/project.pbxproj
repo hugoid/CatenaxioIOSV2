@@ -11,8 +11,6 @@
 		214BB9271BE214D200D2B89F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9201BE214D200D2B89F /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		214BB9281BE214D200D2B89F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9211BE214D200D2B89F /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		214BB9291BE214D200D2B89F /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9221BE214D200D2B89F /* ParseCrashReporting.framework */; settings = {ASSET_TAGS = (); }; };
-		214BB92A1BE214D200D2B89F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9231BE214D200D2B89F /* ParseFacebookUtils.framework */; settings = {ASSET_TAGS = (); }; };
-		214BB92B1BE214D200D2B89F /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9241BE214D200D2B89F /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
 		214BB92C1BE214D200D2B89F /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9251BE214D200D2B89F /* ParseTwitterUtils.framework */; settings = {ASSET_TAGS = (); }; };
 		214BB92D1BE214D200D2B89F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9261BE214D200D2B89F /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
 		214BB92F1BE214F000D2B89F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB92E1BE214F000D2B89F /* AudioToolbox.framework */; };
@@ -24,8 +22,12 @@
 		214BB93B1BE2154000D2B89F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB93A1BE2154000D2B89F /* SystemConfiguration.framework */; };
 		214BB93D1BE2154C00D2B89F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB93C1BE2154B00D2B89F /* libz.tbd */; };
 		214BB93F1BE2155300D2B89F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB93E1BE2155300D2B89F /* libsqlite3.0.tbd */; };
-		214BB9411BE2156500D2B89F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9401BE2156500D2B89F /* Accounts.framework */; };
-		214BB9431BE2156B00D2B89F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9421BE2156B00D2B89F /* Social.framework */; };
+		214BB9471BE2198400D2B89F /* HIDModeloEstadisticasJugador.m in Sources */ = {isa = PBXBuildFile; fileRef = 214BB9461BE2198400D2B89F /* HIDModeloEstadisticasJugador.m */; settings = {ASSET_TAGS = (); }; };
+		214BB9481BE21DD500D2B89F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9401BE2156500D2B89F /* Accounts.framework */; };
+		214BB9491BE21DE500D2B89F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9421BE2156B00D2B89F /* Social.framework */; };
+		214BB94B1BE21DED00D2B89F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB94A1BE21DED00D2B89F /* Twitter.framework */; };
+		214BB94D1BE2288000D2B89F /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB94C1BE2288000D2B89F /* libstdc++.6.tbd */; };
+		214BB94F1BE2503800D2B89F /* ejemplo3.html in Resources */ = {isa = PBXBuildFile; fileRef = 214BB94E1BE2503800D2B89F /* ejemplo3.html */; settings = {ASSET_TAGS = (); }; };
 		216E5EBA19E466C10076B72D /* CeldaResultados.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E5EB719E466C10076B72D /* CeldaResultados.xib */; };
 		216E5EBB19E466C10076B72D /* HIDCeldaResultados.m in Sources */ = {isa = PBXBuildFile; fileRef = 216E5EB919E466C10076B72D /* HIDCeldaResultados.m */; };
 		216E5EBE19E466DF0076B72D /* HIDObjetoResultado.m in Sources */ = {isa = PBXBuildFile; fileRef = 216E5EBD19E466DF0076B72D /* HIDObjetoResultado.m */; };
@@ -68,6 +70,7 @@
 		21CAAE2A19D8252700123607 /* HIDPartidosEmpatados.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21CAAE2819D8252700123607 /* HIDPartidosEmpatados.xib */; };
 		21CAAE2E19D8253700123607 /* HIDPartidosPerdidos.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAAE2C19D8253700123607 /* HIDPartidosPerdidos.m */; };
 		21CAAE2F19D8253700123607 /* HIDPartidosPerdidos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21CAAE2D19D8253700123607 /* HIDPartidosPerdidos.xib */; };
+		C79A39FD893AE6C0474765FF /* libPods-CatenaxioIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C37359D1BE106D9D73917EB /* libPods-CatenaxioIOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C37359D1BE106D9D73917EB /* libPods-CatenaxioIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatenaxioIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		213AE4C31BC7C80A00D23CFC /* ejemplo2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo2.html; sourceTree = "<group>"; };
 		214BB9201BE214D200D2B89F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		214BB9211BE214D200D2B89F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -100,6 +104,11 @@
 		214BB93E1BE2155300D2B89F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		214BB9401BE2156500D2B89F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		214BB9421BE2156B00D2B89F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		214BB9451BE2198400D2B89F /* HIDModeloEstadisticasJugador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDModeloEstadisticasJugador.h; sourceTree = "<group>"; };
+		214BB9461BE2198400D2B89F /* HIDModeloEstadisticasJugador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDModeloEstadisticasJugador.m; sourceTree = "<group>"; };
+		214BB94A1BE21DED00D2B89F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		214BB94C1BE2288000D2B89F /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		214BB94E1BE2503800D2B89F /* ejemplo3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo3.html; sourceTree = "<group>"; };
 		216E5EB719E466C10076B72D /* CeldaResultados.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaResultados.xib; sourceTree = "<group>"; };
 		216E5EB819E466C10076B72D /* HIDCeldaResultados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDCeldaResultados.h; sourceTree = "<group>"; };
 		216E5EB919E466C10076B72D /* HIDCeldaResultados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDCeldaResultados.m; sourceTree = "<group>"; };
@@ -165,6 +174,8 @@
 		21CAAE2B19D8253700123607 /* HIDPartidosPerdidos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDPartidosPerdidos.h; sourceTree = "<group>"; };
 		21CAAE2C19D8253700123607 /* HIDPartidosPerdidos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDPartidosPerdidos.m; sourceTree = "<group>"; };
 		21CAAE2D19D8253700123607 /* HIDPartidosPerdidos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDPartidosPerdidos.xib; sourceTree = "<group>"; };
+		22A7962C990D98EEBF947DCE /* Pods-CatenaxioIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatenaxioIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatenaxioIOS/Pods-CatenaxioIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E01387D92AD6A648849BF64B /* Pods-CatenaxioIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatenaxioIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatenaxioIOS/Pods-CatenaxioIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +183,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				214BB9431BE2156B00D2B89F /* Social.framework in Frameworks */,
-				214BB9411BE2156500D2B89F /* Accounts.framework in Frameworks */,
+				214BB94D1BE2288000D2B89F /* libstdc++.6.tbd in Frameworks */,
+				214BB94B1BE21DED00D2B89F /* Twitter.framework in Frameworks */,
+				214BB9491BE21DE500D2B89F /* Social.framework in Frameworks */,
+				214BB9481BE21DD500D2B89F /* Accounts.framework in Frameworks */,
 				214BB93F1BE2155300D2B89F /* libsqlite3.0.tbd in Frameworks */,
 				214BB93D1BE2154C00D2B89F /* libz.tbd in Frameworks */,
 				214BB93B1BE2154000D2B89F /* SystemConfiguration.framework in Frameworks */,
@@ -184,15 +197,14 @@
 				21A80AB519D49C7A00FFE67D /* CoreGraphics.framework in Frameworks */,
 				214BB9311BE214FD00D2B89F /* CFNetwork.framework in Frameworks */,
 				214BB92F1BE214F000D2B89F /* AudioToolbox.framework in Frameworks */,
-				214BB92A1BE214D200D2B89F /* ParseFacebookUtils.framework in Frameworks */,
 				214BB92D1BE214D200D2B89F /* ParseUI.framework in Frameworks */,
-				214BB92B1BE214D200D2B89F /* ParseFacebookUtilsV4.framework in Frameworks */,
 				214BB9291BE214D200D2B89F /* ParseCrashReporting.framework in Frameworks */,
 				214BB92C1BE214D200D2B89F /* ParseTwitterUtils.framework in Frameworks */,
 				21A80AB719D49C7A00FFE67D /* UIKit.framework in Frameworks */,
 				21A80AB319D49C7A00FFE67D /* Foundation.framework in Frameworks */,
 				214BB9271BE214D200D2B89F /* Bolts.framework in Frameworks */,
 				214BB9281BE214D200D2B89F /* Parse.framework in Frameworks */,
+				C79A39FD893AE6C0474765FF /* libPods-CatenaxioIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				213AE4C31BC7C80A00D23CFC /* ejemplo2.html */,
+				214BB94E1BE2503800D2B89F /* ejemplo3.html */,
 			);
 			name = graficos;
 			sourceTree = "<group>";
@@ -231,6 +244,15 @@
 			name = framwork;
 			sourceTree = "<group>";
 		};
+		214BB9441BE2196000D2B89F /* JSONMOdel */ = {
+			isa = PBXGroup;
+			children = (
+				214BB9451BE2198400D2B89F /* HIDModeloEstadisticasJugador.h */,
+				214BB9461BE2198400D2B89F /* HIDModeloEstadisticasJugador.m */,
+			);
+			name = JSONMOdel;
+			sourceTree = "<group>";
+		};
 		21A80AA619D49C7900FFE67D = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +260,7 @@
 				21A80AD119D49C7A00FFE67D /* CatenaxioIOSTests */,
 				21A80AB119D49C7A00FFE67D /* Frameworks */,
 				21A80AB019D49C7A00FFE67D /* Products */,
+				4733A8CD53FD2F591459559F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +276,8 @@
 		21A80AB119D49C7A00FFE67D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				214BB94C1BE2288000D2B89F /* libstdc++.6.tbd */,
+				214BB94A1BE21DED00D2B89F /* Twitter.framework */,
 				214BB9421BE2156B00D2B89F /* Social.framework */,
 				214BB9401BE2156500D2B89F /* Accounts.framework */,
 				214BB93E1BE2155300D2B89F /* libsqlite3.0.tbd */,
@@ -268,6 +293,7 @@
 				21A80AB419D49C7A00FFE67D /* CoreGraphics.framework */,
 				21A80AB619D49C7A00FFE67D /* UIKit.framework */,
 				21A80ACB19D49C7A00FFE67D /* XCTest.framework */,
+				1C37359D1BE106D9D73917EB /* libPods-CatenaxioIOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -354,6 +380,7 @@
 		21AE7A9819D6BBBC00E9FCEC /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				214BB9441BE2196000D2B89F /* JSONMOdel */,
 				21AE7A9919D6BBD600E9FCEC /* HIDObjetoCalendario.h */,
 				21AE7A9A19D6BBD600E9FCEC /* HIDObjetoCalendario.m */,
 				21CAAE1419D812B300123607 /* HIDObjetoEstadisticas.h */,
@@ -395,6 +422,15 @@
 			name = ControladoresWeb;
 			sourceTree = "<group>";
 		};
+		4733A8CD53FD2F591459559F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22A7962C990D98EEBF947DCE /* Pods-CatenaxioIOS.debug.xcconfig */,
+				E01387D92AD6A648849BF64B /* Pods-CatenaxioIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,9 +438,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21A80ADB19D49C7A00FFE67D /* Build configuration list for PBXNativeTarget "CatenaxioIOS" */;
 			buildPhases = (
+				B41C9EB742089CA4598518E1 /* Check Pods Manifest.lock */,
 				21A80AAB19D49C7900FFE67D /* Sources */,
 				21A80AAC19D49C7900FFE67D /* Frameworks */,
 				21A80AAD19D49C7900FFE67D /* Resources */,
+				3808702A217F0ACF36710BE1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -482,6 +520,7 @@
 				21A80AC519D49C7A00FFE67D /* ima.xcassets in Resources */,
 				21BBF0A919E5B56A00B21582 /* CeldaConvocatoria.xib in Resources */,
 				21CAAE2A19D8252700123607 /* HIDPartidosEmpatados.xib in Resources */,
+				214BB94F1BE2503800D2B89F /* ejemplo3.html in Resources */,
 				21AE7A9419D6B7ED00E9FCEC /* HIDPantallaPrincipal.xib in Resources */,
 				21AE7AA619D6CE6800E9FCEC /* HIDConvocatoria.xib in Resources */,
 				21CAAE2519D8251200123607 /* HIDPartidosGanados.xib in Resources */,
@@ -497,6 +536,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3808702A217F0ACF36710BE1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatenaxioIOS/Pods-CatenaxioIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B41C9EB742089CA4598518E1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21A80AAB19D49C7900FFE67D /* Sources */ = {
@@ -518,6 +590,7 @@
 				21CAAE1B19D81A1100123607 /* HIDCeldaEstadisticaCell.m in Sources */,
 				21CAAE2419D8251200123607 /* HIDPartidosGanados.m in Sources */,
 				21A80AC319D49C7A00FFE67D /* HIDAppDelegate.m in Sources */,
+				214BB9471BE2198400D2B89F /* HIDModeloEstadisticasJugador.m in Sources */,
 				21CAAE1F19D8246A00123607 /* HIDLiga.m in Sources */,
 				216E5EBB19E466C10076B72D /* HIDCeldaResultados.m in Sources */,
 				216E5EBE19E466DF0076B72D /* HIDObjetoResultado.m in Sources */,
@@ -639,6 +712,7 @@
 		};
 		21A80ADC19D49C7A00FFE67D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22A7962C990D98EEBF947DCE /* Pods-CatenaxioIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -656,6 +730,7 @@
 		};
 		21A80ADD19D49C7A00FFE67D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01387D92AD6A648849BF64B /* Pods-CatenaxioIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
