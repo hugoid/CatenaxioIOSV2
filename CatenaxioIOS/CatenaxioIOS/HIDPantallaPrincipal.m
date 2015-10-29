@@ -55,8 +55,14 @@
 }
 
 - (IBAction)pushConvocatoria:(id)sender {
-    HIDTablaConvocatoria *tabla=[[HIDTablaConvocatoria alloc]init];
-    [self.navigationController pushViewController:tabla animated:YES];
+    UIAlertView *alerta=[[UIAlertView alloc]initWithTitle:@"Catenaxio"
+                                                  message:@"En construcción. \n Pero vamos que va pa largo..."
+                                                 delegate:nil
+                                        cancelButtonTitle:nil
+                                        otherButtonTitles:@"OK", nil];
+    [alerta show];
+    //HIDTablaConvocatoria *tabla=[[HIDTablaConvocatoria alloc]init];
+    //[self.navigationController pushViewController:tabla animated:YES];
 }
 
 - (IBAction)pushEstadisticas:(id)sender {

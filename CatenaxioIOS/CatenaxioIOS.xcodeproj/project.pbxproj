@@ -30,6 +30,7 @@
 		214BB94F1BE2503800D2B89F /* ejemplo3.html in Resources */ = {isa = PBXBuildFile; fileRef = 214BB94E1BE2503800D2B89F /* ejemplo3.html */; settings = {ASSET_TAGS = (); }; };
 		214BB9541BE277A900D2B89F /* HIDPartidosResultados.m in Sources */ = {isa = PBXBuildFile; fileRef = 214BB9521BE277A900D2B89F /* HIDPartidosResultados.m */; settings = {ASSET_TAGS = (); }; };
 		214BB9551BE277A900D2B89F /* HIDPartidosResultados.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214BB9531BE277A900D2B89F /* HIDPartidosResultados.xib */; settings = {ASSET_TAGS = (); }; };
+		214BB9591BE27FC300D2B89F /* HIDModeloJSONResultado.m in Sources */ = {isa = PBXBuildFile; fileRef = 214BB9581BE27FC300D2B89F /* HIDModeloJSONResultado.m */; settings = {ASSET_TAGS = (); }; };
 		216E5EBA19E466C10076B72D /* CeldaResultados.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E5EB719E466C10076B72D /* CeldaResultados.xib */; };
 		216E5EBB19E466C10076B72D /* HIDCeldaResultados.m in Sources */ = {isa = PBXBuildFile; fileRef = 216E5EB919E466C10076B72D /* HIDCeldaResultados.m */; };
 		216E5EBE19E466DF0076B72D /* HIDObjetoResultado.m in Sources */ = {isa = PBXBuildFile; fileRef = 216E5EBD19E466DF0076B72D /* HIDObjetoResultado.m */; };
@@ -114,6 +115,8 @@
 		214BB9511BE277A900D2B89F /* HIDPartidosResultados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDPartidosResultados.h; sourceTree = "<group>"; };
 		214BB9521BE277A900D2B89F /* HIDPartidosResultados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDPartidosResultados.m; sourceTree = "<group>"; };
 		214BB9531BE277A900D2B89F /* HIDPartidosResultados.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDPartidosResultados.xib; sourceTree = "<group>"; };
+		214BB9571BE27FC300D2B89F /* HIDModeloJSONResultado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDModeloJSONResultado.h; sourceTree = "<group>"; };
+		214BB9581BE27FC300D2B89F /* HIDModeloJSONResultado.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDModeloJSONResultado.m; sourceTree = "<group>"; };
 		216E5EB719E466C10076B72D /* CeldaResultados.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaResultados.xib; sourceTree = "<group>"; };
 		216E5EB819E466C10076B72D /* HIDCeldaResultados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDCeldaResultados.h; sourceTree = "<group>"; };
 		216E5EB919E466C10076B72D /* HIDCeldaResultados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDCeldaResultados.m; sourceTree = "<group>"; };
@@ -249,13 +252,13 @@
 			name = framwork;
 			sourceTree = "<group>";
 		};
-		214BB9441BE2196000D2B89F /* JSONMOdel */ = {
+		214BB9441BE2196000D2B89F /* JSONMOdelJugador */ = {
 			isa = PBXGroup;
 			children = (
 				214BB9451BE2198400D2B89F /* HIDModeloEstadisticasJugador.h */,
 				214BB9461BE2198400D2B89F /* HIDModeloEstadisticasJugador.m */,
 			);
-			name = JSONMOdel;
+			name = JSONMOdelJugador;
 			sourceTree = "<group>";
 		};
 		214BB9501BE2778D00D2B89F /* TablaResultado */ = {
@@ -266,6 +269,15 @@
 				214BB9531BE277A900D2B89F /* HIDPartidosResultados.xib */,
 			);
 			name = TablaResultado;
+			sourceTree = "<group>";
+		};
+		214BB9561BE27F6100D2B89F /* JSONModelResultado */ = {
+			isa = PBXGroup;
+			children = (
+				214BB9571BE27FC300D2B89F /* HIDModeloJSONResultado.h */,
+				214BB9581BE27FC300D2B89F /* HIDModeloJSONResultado.m */,
+			);
+			name = JSONModelResultado;
 			sourceTree = "<group>";
 		};
 		21A80AA619D49C7900FFE67D = {
@@ -396,7 +408,8 @@
 		21AE7A9819D6BBBC00E9FCEC /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
-				214BB9441BE2196000D2B89F /* JSONMOdel */,
+				214BB9561BE27F6100D2B89F /* JSONModelResultado */,
+				214BB9441BE2196000D2B89F /* JSONMOdelJugador */,
 				21AE7A9919D6BBD600E9FCEC /* HIDObjetoCalendario.h */,
 				21AE7A9A19D6BBD600E9FCEC /* HIDObjetoCalendario.m */,
 				21CAAE1419D812B300123607 /* HIDObjetoEstadisticas.h */,
@@ -605,6 +618,7 @@
 				21AE7AA119D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.m in Sources */,
 				21AE7A9B19D6BBD600E9FCEC /* HIDObjetoCalendario.m in Sources */,
 				21CAAE1B19D81A1100123607 /* HIDCeldaEstadisticaCell.m in Sources */,
+				214BB9591BE27FC300D2B89F /* HIDModeloJSONResultado.m in Sources */,
 				214BB9541BE277A900D2B89F /* HIDPartidosResultados.m in Sources */,
 				21CAAE2419D8251200123607 /* HIDPartidosGanados.m in Sources */,
 				21A80AC319D49C7A00FFE67D /* HIDAppDelegate.m in Sources */,

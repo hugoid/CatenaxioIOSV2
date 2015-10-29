@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HIDPartidosResultados : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tabla;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicadorEspera;
 
 @end
