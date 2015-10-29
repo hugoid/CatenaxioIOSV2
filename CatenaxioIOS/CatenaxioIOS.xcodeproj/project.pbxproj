@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		213AE4C41BC7C80A00D23CFC /* ejemplo2.html in Resources */ = {isa = PBXBuildFile; fileRef = 213AE4C31BC7C80A00D23CFC /* ejemplo2.html */; settings = {ASSET_TAGS = (); }; };
+		216E5EBA19E466C10076B72D /* CeldaResultados.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E5EB719E466C10076B72D /* CeldaResultados.xib */; };
+		216E5EBB19E466C10076B72D /* HIDCeldaResultados.m in Sources */ = {isa = PBXBuildFile; fileRef = 216E5EB919E466C10076B72D /* HIDCeldaResultados.m */; };
+		216E5EBE19E466DF0076B72D /* HIDObjetoResultado.m in Sources */ = {isa = PBXBuildFile; fileRef = 216E5EBD19E466DF0076B72D /* HIDObjetoResultado.m */; };
+		216E5EC119E4670C0076B72D /* HIDTablaResultadosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216E5EC019E4670C0076B72D /* HIDTablaResultadosTableViewController.m */; };
+		21A80AB319D49C7A00FFE67D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A80AB219D49C7A00FFE67D /* Foundation.framework */; };
+		21A80AB519D49C7A00FFE67D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A80AB419D49C7A00FFE67D /* CoreGraphics.framework */; };
+		21A80AB719D49C7A00FFE67D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A80AB619D49C7A00FFE67D /* UIKit.framework */; };
+		21A80ABD19D49C7A00FFE67D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21A80ABB19D49C7A00FFE67D /* InfoPlist.strings */; };
+		21A80ABF19D49C7A00FFE67D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A80ABE19D49C7A00FFE67D /* main.m */; };
+		21A80AC319D49C7A00FFE67D /* HIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A80AC219D49C7A00FFE67D /* HIDAppDelegate.m */; };
+		21A80AC519D49C7A00FFE67D /* ima.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A80AC419D49C7A00FFE67D /* ima.xcassets */; };
+		21A80ACC19D49C7A00FFE67D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A80ACB19D49C7A00FFE67D /* XCTest.framework */; };
+		21A80ACD19D49C7A00FFE67D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A80AB219D49C7A00FFE67D /* Foundation.framework */; };
+		21A80ACE19D49C7A00FFE67D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A80AB619D49C7A00FFE67D /* UIKit.framework */; };
+		21A80AD619D49C7A00FFE67D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21A80AD419D49C7A00FFE67D /* InfoPlist.strings */; };
+		21A80AD819D49C7A00FFE67D /* CatenaxioIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A80AD719D49C7A00FFE67D /* CatenaxioIOSTests.m */; };
+		21AA5C7619E153F1005E53F8 /* HIDWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AA5C7419E153F1005E53F8 /* HIDWebController.m */; };
+		21AA5C7719E153F1005E53F8 /* HIDWebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AA5C7519E153F1005E53F8 /* HIDWebController.xib */; };
+		21AE7A9319D6B7ED00E9FCEC /* HIDPantallaPrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AE7A9119D6B7ED00E9FCEC /* HIDPantallaPrincipal.m */; };
+		21AE7A9419D6B7ED00E9FCEC /* HIDPantallaPrincipal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AE7A9219D6B7ED00E9FCEC /* HIDPantallaPrincipal.xib */; };
+		21AE7A9719D6BB3E00E9FCEC /* HIDCalendario.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AE7A9619D6BB3E00E9FCEC /* HIDCalendario.m */; };
+		21AE7A9B19D6BBD600E9FCEC /* HIDObjetoCalendario.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AE7A9A19D6BBD600E9FCEC /* HIDObjetoCalendario.m */; };
+		21AE7A9E19D6BF8900E9FCEC /* CeldaTablaCalendario.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AE7A9D19D6BF8900E9FCEC /* CeldaTablaCalendario.xib */; };
+		21AE7AA119D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AE7AA019D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.m */; };
+		21AE7AA519D6CE6800E9FCEC /* HIDConvocatoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AE7AA319D6CE6800E9FCEC /* HIDConvocatoria.m */; };
+		21AE7AA619D6CE6800E9FCEC /* HIDConvocatoria.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AE7AA419D6CE6800E9FCEC /* HIDConvocatoria.xib */; };
+		21AE7AA919D6CF1300E9FCEC /* HIDEstadisticas.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AE7AA819D6CF1300E9FCEC /* HIDEstadisticas.m */; };
+		21BBF0A919E5B56A00B21582 /* CeldaConvocatoria.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21BBF0A619E5B56A00B21582 /* CeldaConvocatoria.xib */; };
+		21BBF0AA19E5B56A00B21582 /* HIDCeldaConvocatoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BBF0A819E5B56A00B21582 /* HIDCeldaConvocatoria.m */; };
+		21BBF0AD19E5B58000B21582 /* HIDTablaConvocatoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BBF0AC19E5B58000B21582 /* HIDTablaConvocatoria.m */; };
+		21BBF0B019E5B5D000B21582 /* HIDObjetoConvocatoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BBF0AF19E5B5D000B21582 /* HIDObjetoConvocatoria.m */; };
+		21CAAE1619D812B300123607 /* HIDObjetoEstadisticas.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAAE1519D812B300123607 /* HIDObjetoEstadisticas.m */; };
+		21CAAE1819D8189D00123607 /* CeldaEstadisticas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21CAAE1719D8189D00123607 /* CeldaEstadisticas.xib */; };
+		21CAAE1B19D81A1100123607 /* HIDCeldaEstadisticaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAAE1A19D81A1100123607 /* HIDCeldaEstadisticaCell.m */; };
+		21CAAE1F19D8246A00123607 /* HIDLiga.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAAE1D19D8246A00123607 /* HIDLiga.m */; };
+		21CAAE2019D8246A00123607 /* HIDLiga.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21CAAE1E19D8246A00123607 /* HIDLiga.xib */; };
+		21CAAE2419D8251200123607 /* HIDPartidosGanados.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAAE2219D8251200123607 /* HIDPartidosGanados.m */; };
+		21CAAE2519D8251200123607 /* HIDPartidosGanados.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21CAAE2319D8251200123607 /* HIDPartidosGanados.xib */; };
+		21CAAE2919D8252700123607 /* HIDPartidosEmpatados.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAAE2719D8252700123607 /* HIDPartidosEmpatados.m */; };
+		21CAAE2A19D8252700123607 /* HIDPartidosEmpatados.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21CAAE2819D8252700123607 /* HIDPartidosEmpatados.xib */; };
+		21CAAE2E19D8253700123607 /* HIDPartidosPerdidos.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAAE2C19D8253700123607 /* HIDPartidosPerdidos.m */; };
+		21CAAE2F19D8253700123607 /* HIDPartidosPerdidos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21CAAE2D19D8253700123607 /* HIDPartidosPerdidos.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21A80ACF19D49C7A00FFE67D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21A80AA719D49C7900FFE67D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21A80AAE19D49C7900FFE67D;
+			remoteInfo = CatenaxioIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		213AE4C31BC7C80A00D23CFC /* ejemplo2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo2.html; sourceTree = "<group>"; };
+		216E5EB719E466C10076B72D /* CeldaResultados.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaResultados.xib; sourceTree = "<group>"; };
+		216E5EB819E466C10076B72D /* HIDCeldaResultados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDCeldaResultados.h; sourceTree = "<group>"; };
+		216E5EB919E466C10076B72D /* HIDCeldaResultados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDCeldaResultados.m; sourceTree = "<group>"; };
+		216E5EBC19E466DF0076B72D /* HIDObjetoResultado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDObjetoResultado.h; sourceTree = "<group>"; };
+		216E5EBD19E466DF0076B72D /* HIDObjetoResultado.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDObjetoResultado.m; sourceTree = "<group>"; };
+		216E5EBF19E4670C0076B72D /* HIDTablaResultadosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDTablaResultadosTableViewController.h; sourceTree = "<group>"; };
+		216E5EC019E4670C0076B72D /* HIDTablaResultadosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDTablaResultadosTableViewController.m; sourceTree = "<group>"; };
+		21A80AAF19D49C7A00FFE67D /* CatenaxioIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatenaxioIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A80AB219D49C7A00FFE67D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		21A80AB419D49C7A00FFE67D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		21A80AB619D49C7A00FFE67D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		21A80ABA19D49C7A00FFE67D /* CatenaxioIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CatenaxioIOS-Info.plist"; sourceTree = "<group>"; };
+		21A80ABC19D49C7A00FFE67D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		21A80ABE19D49C7A00FFE67D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21A80AC019D49C7A00FFE67D /* CatenaxioIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatenaxioIOS-Prefix.pch"; sourceTree = "<group>"; };
+		21A80AC119D49C7A00FFE67D /* HIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIDAppDelegate.h; sourceTree = "<group>"; };
+		21A80AC219D49C7A00FFE67D /* HIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIDAppDelegate.m; sourceTree = "<group>"; };
+		21A80AC419D49C7A00FFE67D /* ima.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ima.xcassets; sourceTree = "<group>"; };
+		21A80ACA19D49C7A00FFE67D /* CatenaxioIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatenaxioIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A80ACB19D49C7A00FFE67D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		21A80AD319D49C7A00FFE67D /* CatenaxioIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CatenaxioIOSTests-Info.plist"; sourceTree = "<group>"; };
+		21A80AD519D49C7A00FFE67D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		21A80AD719D49C7A00FFE67D /* CatenaxioIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatenaxioIOSTests.m; sourceTree = "<group>"; };
+		21AA5C7319E153F1005E53F8 /* HIDWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDWebController.h; sourceTree = "<group>"; };
+		21AA5C7419E153F1005E53F8 /* HIDWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDWebController.m; sourceTree = "<group>"; };
+		21AA5C7519E153F1005E53F8 /* HIDWebController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDWebController.xib; sourceTree = "<group>"; };
+		21AE7A9019D6B7ED00E9FCEC /* HIDPantallaPrincipal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDPantallaPrincipal.h; sourceTree = "<group>"; };
+		21AE7A9119D6B7ED00E9FCEC /* HIDPantallaPrincipal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDPantallaPrincipal.m; sourceTree = "<group>"; };
+		21AE7A9219D6B7ED00E9FCEC /* HIDPantallaPrincipal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDPantallaPrincipal.xib; sourceTree = "<group>"; };
+		21AE7A9519D6BB3E00E9FCEC /* HIDCalendario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDCalendario.h; sourceTree = "<group>"; };
+		21AE7A9619D6BB3E00E9FCEC /* HIDCalendario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDCalendario.m; sourceTree = "<group>"; };
+		21AE7A9919D6BBD600E9FCEC /* HIDObjetoCalendario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDObjetoCalendario.h; sourceTree = "<group>"; };
+		21AE7A9A19D6BBD600E9FCEC /* HIDObjetoCalendario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDObjetoCalendario.m; sourceTree = "<group>"; };
+		21AE7A9D19D6BF8900E9FCEC /* CeldaTablaCalendario.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaTablaCalendario.xib; sourceTree = "<group>"; };
+		21AE7A9F19D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDCeldaTablaCalendarioCell.h; sourceTree = "<group>"; };
+		21AE7AA019D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDCeldaTablaCalendarioCell.m; sourceTree = "<group>"; };
+		21AE7AA219D6CE6800E9FCEC /* HIDConvocatoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDConvocatoria.h; sourceTree = "<group>"; };
+		21AE7AA319D6CE6800E9FCEC /* HIDConvocatoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDConvocatoria.m; sourceTree = "<group>"; };
+		21AE7AA419D6CE6800E9FCEC /* HIDConvocatoria.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDConvocatoria.xib; sourceTree = "<group>"; };
+		21AE7AA719D6CF1300E9FCEC /* HIDEstadisticas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDEstadisticas.h; sourceTree = "<group>"; };
+		21AE7AA819D6CF1300E9FCEC /* HIDEstadisticas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDEstadisticas.m; sourceTree = "<group>"; };
+		21BBF0A619E5B56A00B21582 /* CeldaConvocatoria.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaConvocatoria.xib; sourceTree = "<group>"; };
+		21BBF0A719E5B56A00B21582 /* HIDCeldaConvocatoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDCeldaConvocatoria.h; sourceTree = "<group>"; };
+		21BBF0A819E5B56A00B21582 /* HIDCeldaConvocatoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDCeldaConvocatoria.m; sourceTree = "<group>"; };
+		21BBF0AB19E5B58000B21582 /* HIDTablaConvocatoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDTablaConvocatoria.h; sourceTree = "<group>"; };
+		21BBF0AC19E5B58000B21582 /* HIDTablaConvocatoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDTablaConvocatoria.m; sourceTree = "<group>"; };
+		21BBF0AE19E5B5D000B21582 /* HIDObjetoConvocatoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDObjetoConvocatoria.h; sourceTree = "<group>"; };
+		21BBF0AF19E5B5D000B21582 /* HIDObjetoConvocatoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDObjetoConvocatoria.m; sourceTree = "<group>"; };
+		21CAAE1419D812B300123607 /* HIDObjetoEstadisticas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDObjetoEstadisticas.h; sourceTree = "<group>"; };
+		21CAAE1519D812B300123607 /* HIDObjetoEstadisticas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDObjetoEstadisticas.m; sourceTree = "<group>"; };
+		21CAAE1719D8189D00123607 /* CeldaEstadisticas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaEstadisticas.xib; sourceTree = "<group>"; };
+		21CAAE1919D81A1100123607 /* HIDCeldaEstadisticaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDCeldaEstadisticaCell.h; sourceTree = "<group>"; };
+		21CAAE1A19D81A1100123607 /* HIDCeldaEstadisticaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDCeldaEstadisticaCell.m; sourceTree = "<group>"; };
+		21CAAE1C19D8246A00123607 /* HIDLiga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDLiga.h; sourceTree = "<group>"; };
+		21CAAE1D19D8246A00123607 /* HIDLiga.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDLiga.m; sourceTree = "<group>"; };
+		21CAAE1E19D8246A00123607 /* HIDLiga.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDLiga.xib; sourceTree = "<group>"; };
+		21CAAE2119D8251200123607 /* HIDPartidosGanados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDPartidosGanados.h; sourceTree = "<group>"; };
+		21CAAE2219D8251200123607 /* HIDPartidosGanados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDPartidosGanados.m; sourceTree = "<group>"; };
+		21CAAE2319D8251200123607 /* HIDPartidosGanados.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDPartidosGanados.xib; sourceTree = "<group>"; };
+		21CAAE2619D8252700123607 /* HIDPartidosEmpatados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDPartidosEmpatados.h; sourceTree = "<group>"; };
+		21CAAE2719D8252700123607 /* HIDPartidosEmpatados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDPartidosEmpatados.m; sourceTree = "<group>"; };
+		21CAAE2819D8252700123607 /* HIDPartidosEmpatados.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDPartidosEmpatados.xib; sourceTree = "<group>"; };
+		21CAAE2B19D8253700123607 /* HIDPartidosPerdidos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDPartidosPerdidos.h; sourceTree = "<group>"; };
+		21CAAE2C19D8253700123607 /* HIDPartidosPerdidos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDPartidosPerdidos.m; sourceTree = "<group>"; };
+		21CAAE2D19D8253700123607 /* HIDPartidosPerdidos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIDPartidosPerdidos.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21A80AAC19D49C7900FFE67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A80AB519D49C7A00FFE67D /* CoreGraphics.framework in Frameworks */,
+				21A80AB719D49C7A00FFE67D /* UIKit.framework in Frameworks */,
+				21A80AB319D49C7A00FFE67D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A80AC719D49C7A00FFE67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A80ACC19D49C7A00FFE67D /* XCTest.framework in Frameworks */,
+				21A80ACE19D49C7A00FFE67D /* UIKit.framework in Frameworks */,
+				21A80ACD19D49C7A00FFE67D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		213AE4C21BC7C7BB00D23CFC /* graficos */ = {
+			isa = PBXGroup;
+			children = (
+				213AE4C31BC7C80A00D23CFC /* ejemplo2.html */,
+			);
+			name = graficos;
+			sourceTree = "<group>";
+		};
+		21A80AA619D49C7900FFE67D = {
+			isa = PBXGroup;
+			children = (
+				21A80AB819D49C7A00FFE67D /* CatenaxioIOS */,
+				21A80AD119D49C7A00FFE67D /* CatenaxioIOSTests */,
+				21A80AB119D49C7A00FFE67D /* Frameworks */,
+				21A80AB019D49C7A00FFE67D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21A80AB019D49C7A00FFE67D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21A80AAF19D49C7A00FFE67D /* CatenaxioIOS.app */,
+				21A80ACA19D49C7A00FFE67D /* CatenaxioIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21A80AB119D49C7A00FFE67D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21A80AB219D49C7A00FFE67D /* Foundation.framework */,
+				21A80AB419D49C7A00FFE67D /* CoreGraphics.framework */,
+				21A80AB619D49C7A00FFE67D /* UIKit.framework */,
+				21A80ACB19D49C7A00FFE67D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21A80AB819D49C7A00FFE67D /* CatenaxioIOS */ = {
+			isa = PBXGroup;
+			children = (
+				213AE4C21BC7C7BB00D23CFC /* graficos */,
+				21C57EF219E315AD0040B340 /* ControladoresWeb */,
+				21AE7A9C19D6BF6B00E9FCEC /* CeldasTablas */,
+				21AE7A9819D6BBBC00E9FCEC /* Modelos */,
+				21AE7A8F19D6B7CE00E9FCEC /* Controladores */,
+				21A80AC119D49C7A00FFE67D /* HIDAppDelegate.h */,
+				21A80AC219D49C7A00FFE67D /* HIDAppDelegate.m */,
+				21A80AC419D49C7A00FFE67D /* ima.xcassets */,
+				21A80AB919D49C7A00FFE67D /* Supporting Files */,
+			);
+			path = CatenaxioIOS;
+			sourceTree = "<group>";
+		};
+		21A80AB919D49C7A00FFE67D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21A80ABA19D49C7A00FFE67D /* CatenaxioIOS-Info.plist */,
+				21A80ABB19D49C7A00FFE67D /* InfoPlist.strings */,
+				21A80ABE19D49C7A00FFE67D /* main.m */,
+				21A80AC019D49C7A00FFE67D /* CatenaxioIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21A80AD119D49C7A00FFE67D /* CatenaxioIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				21A80AD719D49C7A00FFE67D /* CatenaxioIOSTests.m */,
+				21A80AD219D49C7A00FFE67D /* Supporting Files */,
+			);
+			path = CatenaxioIOSTests;
+			sourceTree = "<group>";
+		};
+		21A80AD219D49C7A00FFE67D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21A80AD319D49C7A00FFE67D /* CatenaxioIOSTests-Info.plist */,
+				21A80AD419D49C7A00FFE67D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21AE7A8F19D6B7CE00E9FCEC /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+				21AE7A9019D6B7ED00E9FCEC /* HIDPantallaPrincipal.h */,
+				21AE7A9119D6B7ED00E9FCEC /* HIDPantallaPrincipal.m */,
+				21AE7A9219D6B7ED00E9FCEC /* HIDPantallaPrincipal.xib */,
+				21AE7A9519D6BB3E00E9FCEC /* HIDCalendario.h */,
+				21AE7A9619D6BB3E00E9FCEC /* HIDCalendario.m */,
+				21AE7AA219D6CE6800E9FCEC /* HIDConvocatoria.h */,
+				21AE7AA319D6CE6800E9FCEC /* HIDConvocatoria.m */,
+				21AE7AA419D6CE6800E9FCEC /* HIDConvocatoria.xib */,
+				21AE7AA719D6CF1300E9FCEC /* HIDEstadisticas.h */,
+				21AE7AA819D6CF1300E9FCEC /* HIDEstadisticas.m */,
+				21CAAE1C19D8246A00123607 /* HIDLiga.h */,
+				21CAAE1D19D8246A00123607 /* HIDLiga.m */,
+				21CAAE1E19D8246A00123607 /* HIDLiga.xib */,
+				21CAAE2119D8251200123607 /* HIDPartidosGanados.h */,
+				21CAAE2219D8251200123607 /* HIDPartidosGanados.m */,
+				21CAAE2319D8251200123607 /* HIDPartidosGanados.xib */,
+				21CAAE2619D8252700123607 /* HIDPartidosEmpatados.h */,
+				21CAAE2719D8252700123607 /* HIDPartidosEmpatados.m */,
+				21CAAE2819D8252700123607 /* HIDPartidosEmpatados.xib */,
+				21CAAE2B19D8253700123607 /* HIDPartidosPerdidos.h */,
+				21CAAE2C19D8253700123607 /* HIDPartidosPerdidos.m */,
+				21CAAE2D19D8253700123607 /* HIDPartidosPerdidos.xib */,
+				216E5EBF19E4670C0076B72D /* HIDTablaResultadosTableViewController.h */,
+				216E5EC019E4670C0076B72D /* HIDTablaResultadosTableViewController.m */,
+				21BBF0AB19E5B58000B21582 /* HIDTablaConvocatoria.h */,
+				21BBF0AC19E5B58000B21582 /* HIDTablaConvocatoria.m */,
+			);
+			name = Controladores;
+			sourceTree = "<group>";
+		};
+		21AE7A9819D6BBBC00E9FCEC /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				21AE7A9919D6BBD600E9FCEC /* HIDObjetoCalendario.h */,
+				21AE7A9A19D6BBD600E9FCEC /* HIDObjetoCalendario.m */,
+				21CAAE1419D812B300123607 /* HIDObjetoEstadisticas.h */,
+				21CAAE1519D812B300123607 /* HIDObjetoEstadisticas.m */,
+				216E5EBC19E466DF0076B72D /* HIDObjetoResultado.h */,
+				216E5EBD19E466DF0076B72D /* HIDObjetoResultado.m */,
+				21BBF0AE19E5B5D000B21582 /* HIDObjetoConvocatoria.h */,
+				21BBF0AF19E5B5D000B21582 /* HIDObjetoConvocatoria.m */,
+			);
+			name = Modelos;
+			sourceTree = "<group>";
+		};
+		21AE7A9C19D6BF6B00E9FCEC /* CeldasTablas */ = {
+			isa = PBXGroup;
+			children = (
+				21AE7A9D19D6BF8900E9FCEC /* CeldaTablaCalendario.xib */,
+				21AE7A9F19D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.h */,
+				21AE7AA019D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.m */,
+				21CAAE1719D8189D00123607 /* CeldaEstadisticas.xib */,
+				21CAAE1919D81A1100123607 /* HIDCeldaEstadisticaCell.h */,
+				21CAAE1A19D81A1100123607 /* HIDCeldaEstadisticaCell.m */,
+				216E5EB719E466C10076B72D /* CeldaResultados.xib */,
+				216E5EB819E466C10076B72D /* HIDCeldaResultados.h */,
+				216E5EB919E466C10076B72D /* HIDCeldaResultados.m */,
+				21BBF0A619E5B56A00B21582 /* CeldaConvocatoria.xib */,
+				21BBF0A719E5B56A00B21582 /* HIDCeldaConvocatoria.h */,
+				21BBF0A819E5B56A00B21582 /* HIDCeldaConvocatoria.m */,
+			);
+			name = CeldasTablas;
+			sourceTree = "<group>";
+		};
+		21C57EF219E315AD0040B340 /* ControladoresWeb */ = {
+			isa = PBXGroup;
+			children = (
+				21AA5C7319E153F1005E53F8 /* HIDWebController.h */,
+				21AA5C7419E153F1005E53F8 /* HIDWebController.m */,
+				21AA5C7519E153F1005E53F8 /* HIDWebController.xib */,
+			);
+			name = ControladoresWeb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21A80AAE19D49C7900FFE67D /* CatenaxioIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A80ADB19D49C7A00FFE67D /* Build configuration list for PBXNativeTarget "CatenaxioIOS" */;
+			buildPhases = (
+				21A80AAB19D49C7900FFE67D /* Sources */,
+				21A80AAC19D49C7900FFE67D /* Frameworks */,
+				21A80AAD19D49C7900FFE67D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatenaxioIOS;
+			productName = CatenaxioIOS;
+			productReference = 21A80AAF19D49C7A00FFE67D /* CatenaxioIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21A80AC919D49C7A00FFE67D /* CatenaxioIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A80ADE19D49C7A00FFE67D /* Build configuration list for PBXNativeTarget "CatenaxioIOSTests" */;
+			buildPhases = (
+				21A80AC619D49C7A00FFE67D /* Sources */,
+				21A80AC719D49C7A00FFE67D /* Frameworks */,
+				21A80AC819D49C7A00FFE67D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21A80AD019D49C7A00FFE67D /* PBXTargetDependency */,
+			);
+			name = CatenaxioIOSTests;
+			productName = CatenaxioIOSTests;
+			productReference = 21A80ACA19D49C7A00FFE67D /* CatenaxioIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21A80AA719D49C7900FFE67D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HID;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Hugo Izquierdo";
+				TargetAttributes = {
+					21A80AC919D49C7A00FFE67D = {
+						TestTargetID = 21A80AAE19D49C7900FFE67D;
+					};
+				};
+			};
+			buildConfigurationList = 21A80AAA19D49C7900FFE67D /* Build configuration list for PBXProject "CatenaxioIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 21A80AA619D49C7900FFE67D;
+			productRefGroup = 21A80AB019D49C7A00FFE67D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21A80AAE19D49C7900FFE67D /* CatenaxioIOS */,
+				21A80AC919D49C7A00FFE67D /* CatenaxioIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21A80AAD19D49C7900FFE67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				213AE4C41BC7C80A00D23CFC /* ejemplo2.html in Resources */,
+				21AE7A9E19D6BF8900E9FCEC /* CeldaTablaCalendario.xib in Resources */,
+				21CAAE2F19D8253700123607 /* HIDPartidosPerdidos.xib in Resources */,
+				21A80ABD19D49C7A00FFE67D /* InfoPlist.strings in Resources */,
+				216E5EBA19E466C10076B72D /* CeldaResultados.xib in Resources */,
+				21AA5C7719E153F1005E53F8 /* HIDWebController.xib in Resources */,
+				21CAAE1819D8189D00123607 /* CeldaEstadisticas.xib in Resources */,
+				21CAAE2019D8246A00123607 /* HIDLiga.xib in Resources */,
+				21A80AC519D49C7A00FFE67D /* ima.xcassets in Resources */,
+				21BBF0A919E5B56A00B21582 /* CeldaConvocatoria.xib in Resources */,
+				21CAAE2A19D8252700123607 /* HIDPartidosEmpatados.xib in Resources */,
+				21AE7A9419D6B7ED00E9FCEC /* HIDPantallaPrincipal.xib in Resources */,
+				21AE7AA619D6CE6800E9FCEC /* HIDConvocatoria.xib in Resources */,
+				21CAAE2519D8251200123607 /* HIDPartidosGanados.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A80AC819D49C7A00FFE67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A80AD619D49C7A00FFE67D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21A80AAB19D49C7900FFE67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21CAAE2919D8252700123607 /* HIDPartidosEmpatados.m in Sources */,
+				21CAAE2E19D8253700123607 /* HIDPartidosPerdidos.m in Sources */,
+				21BBF0AA19E5B56A00B21582 /* HIDCeldaConvocatoria.m in Sources */,
+				216E5EC119E4670C0076B72D /* HIDTablaResultadosTableViewController.m in Sources */,
+				21AE7A9319D6B7ED00E9FCEC /* HIDPantallaPrincipal.m in Sources */,
+				21AE7A9719D6BB3E00E9FCEC /* HIDCalendario.m in Sources */,
+				21BBF0AD19E5B58000B21582 /* HIDTablaConvocatoria.m in Sources */,
+				21AE7AA919D6CF1300E9FCEC /* HIDEstadisticas.m in Sources */,
+				21CAAE1619D812B300123607 /* HIDObjetoEstadisticas.m in Sources */,
+				21BBF0B019E5B5D000B21582 /* HIDObjetoConvocatoria.m in Sources */,
+				21AE7AA119D6C0B400E9FCEC /* HIDCeldaTablaCalendarioCell.m in Sources */,
+				21AE7A9B19D6BBD600E9FCEC /* HIDObjetoCalendario.m in Sources */,
+				21CAAE1B19D81A1100123607 /* HIDCeldaEstadisticaCell.m in Sources */,
+				21CAAE2419D8251200123607 /* HIDPartidosGanados.m in Sources */,
+				21A80AC319D49C7A00FFE67D /* HIDAppDelegate.m in Sources */,
+				21CAAE1F19D8246A00123607 /* HIDLiga.m in Sources */,
+				216E5EBB19E466C10076B72D /* HIDCeldaResultados.m in Sources */,
+				216E5EBE19E466DF0076B72D /* HIDObjetoResultado.m in Sources */,
+				21AA5C7619E153F1005E53F8 /* HIDWebController.m in Sources */,
+				21A80ABF19D49C7A00FFE67D /* main.m in Sources */,
+				21AE7AA519D6CE6800E9FCEC /* HIDConvocatoria.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A80AC619D49C7A00FFE67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A80AD819D49C7A00FFE67D /* CatenaxioIOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21A80AD019D49C7A00FFE67D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21A80AAE19D49C7900FFE67D /* CatenaxioIOS */;
+			targetProxy = 21A80ACF19D49C7A00FFE67D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21A80ABB19D49C7A00FFE67D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21A80ABC19D49C7A00FFE67D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		21A80AD419D49C7A00FFE67D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21A80AD519D49C7A00FFE67D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21A80AD919D49C7A00FFE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		21A80ADA19D49C7A00FFE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21A80ADC19D49C7A00FFE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CatenaxioIOS/CatenaxioIOS-Prefix.pch";
+				INFOPLIST_FILE = "CatenaxioIOS/CatenaxioIOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		21A80ADD19D49C7A00FFE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CatenaxioIOS/CatenaxioIOS-Prefix.pch";
+				INFOPLIST_FILE = "CatenaxioIOS/CatenaxioIOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		21A80ADF19D49C7A00FFE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CatenaxioIOS.app/CatenaxioIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CatenaxioIOS/CatenaxioIOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CatenaxioIOSTests/CatenaxioIOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		21A80AE019D49C7A00FFE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CatenaxioIOS.app/CatenaxioIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CatenaxioIOS/CatenaxioIOS-Prefix.pch";
+				INFOPLIST_FILE = "CatenaxioIOSTests/CatenaxioIOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21A80AAA19D49C7900FFE67D /* Build configuration list for PBXProject "CatenaxioIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A80AD919D49C7A00FFE67D /* Debug */,
+				21A80ADA19D49C7A00FFE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21A80ADB19D49C7A00FFE67D /* Build configuration list for PBXNativeTarget "CatenaxioIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A80ADC19D49C7A00FFE67D /* Debug */,
+				21A80ADD19D49C7A00FFE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21A80ADE19D49C7A00FFE67D /* Build configuration list for PBXNativeTarget "CatenaxioIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A80ADF19D49C7A00FFE67D /* Debug */,
+				21A80AE019D49C7A00FFE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21A80AA719D49C7900FFE67D /* Project object */;
+}
