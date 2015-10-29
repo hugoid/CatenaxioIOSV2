@@ -10,5 +10,6 @@
 
 @interface HIDLiga : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imagenClasificacion;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *imagenIndicador;
 
 @end

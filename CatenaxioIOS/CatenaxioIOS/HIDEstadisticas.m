@@ -73,8 +73,8 @@ int golesTotales=0;
         HIDModeloEstadisticasJugador *estadisticasJugadoInvitado=[[HIDModeloEstadisticasJugador alloc]initWithString:stringInvitado error:&err];
         
         listaDescargada=[[NSMutableArray alloc]init];
-        [listaDescargada addObject:estadisticasJugadorAbel];
         [listaDescargada addObject:estadisticasJugadorAbelD];
+        [listaDescargada addObject:estadisticasJugadorAbel];
         [listaDescargada addObject:estadisticasJugadoJordan];
         [listaDescargada addObject:estadisticasJugadoAnton];
         [listaDescargada addObject:estadisticasJugadoCano];
