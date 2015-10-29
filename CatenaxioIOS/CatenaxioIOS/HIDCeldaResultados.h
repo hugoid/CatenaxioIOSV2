@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nombreRival;
 @property (weak, nonatomic) IBOutlet UILabel *resultado;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenResultado;
+@property (weak, nonatomic) IBOutlet UILabel *jornada;
 
 +(CGFloat) cellHeight;
 +(NSString *) cellId;
