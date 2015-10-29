@@ -10,6 +10,7 @@
 #import "HIDObjetoEstadisticas.h"
 #import "HIDCeldaEstadisticaCell.h"
 #import "HIDWebController.h"
+#import <Parse/Parse.h>
 @interface HIDEstadisticas ()
 
 @end
@@ -298,7 +299,8 @@ UIActivityIndicatorView *indicador;
     [indicador startAnimating];
     
     
-    [self descargarInformacion];
+    //[self descargarInformacion];
+    [self descargarInformacionParse];
     
 }
 
@@ -418,6 +420,23 @@ UIActivityIndicatorView *indicador;
                                
                            }];
     
+}
+
+-(void) descargarInformacionParse{
+    PFQuery *query=[PFQuery queryWithClassName:@"Jugadores"];
+    [query
+     findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+         //
+         if (!error) {
+             NSLog(@"Dscargo %@",objects);
+             
+             
+             
+         }
+         else{
+             NSLog(@"error");
+         }
+     }];
 }
 
 -(void) mostrarGrafica{

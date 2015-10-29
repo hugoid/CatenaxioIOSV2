@@ -8,6 +8,7 @@
 
 #import "HIDAppDelegate.h"
 #import "HIDPantallaPrincipal.h"
+#import <Parse/Parse.h>
 
 @implementation HIDAppDelegate
 
@@ -17,6 +18,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"lRLIrMRNzpnlw3O9VaoucfqBEOe8JD2Py3vzAfaN"
+                  clientKey:@"pyh7NMX2fIo18ripJooAAuZ9VG5HnI8qNOaDNd6G"];
     
     //controlador y UINavigation
     HIDPantallaPrincipal *controlador=[[HIDPantallaPrincipal alloc]init];
