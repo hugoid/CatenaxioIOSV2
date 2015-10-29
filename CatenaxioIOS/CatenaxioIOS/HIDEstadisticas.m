@@ -429,7 +429,7 @@ UIActivityIndicatorView *indicador;
          //
          if (!error) {
              NSLog(@"Dscargo %@",objects);
-             
+             //
              
              
          }
