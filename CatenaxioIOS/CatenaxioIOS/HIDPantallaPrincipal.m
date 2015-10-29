@@ -15,6 +15,7 @@
 #import "HIDPartidosGanados.h"
 #import "HIDTablaResultadosTableViewController.h"
 #import "HIDTablaConvocatoria.h"
+#import "HIDPartidosResultados.h"
 
 @interface HIDPantallaPrincipal ()
 
@@ -66,14 +67,14 @@
 - (IBAction)pushClasificacion:(id)sender {
     HIDLiga *liga=[[HIDLiga alloc]init];
     //HIDPartidosEmpatados *empatados=[[HIDPartidosEmpatados alloc]init];
-    HIDPartidosGanados *ganados=[[HIDPartidosGanados alloc]init];
-    HIDPartidosPerdidos *perdidos=[[HIDPartidosPerdidos alloc]init];
+    //HIDPartidosGanados *ganados=[[HIDPartidosGanados alloc]init];
+    //HIDPartidosPerdidos *perdidos=[[HIDPartidosPerdidos alloc]init];
     //HIDTablaResultadosTableViewController *resultados=[[HIDTablaResultadosTableViewController alloc]init];
    // UINavigationBar *bar=[[UINavigationBar alloc]init];
-    
+    HIDPartidosResultados *resultado=[[HIDPartidosResultados alloc]init];
    
     UITabBarController *tab=[[UITabBarController alloc]init];
-    tab.viewControllers=@[liga,ganados];
+    tab.viewControllers=@[liga,resultado];
     [self.navigationController pushViewController:tab animated:YES];
     
 }
