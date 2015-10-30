@@ -75,13 +75,17 @@ int golesTotales=0;
         listaDescargada=[[NSMutableArray alloc]init];
         [listaDescargada addObject:estadisticasJugadorAbelD];
         [listaDescargada addObject:estadisticasJugadorAbel];
+         [listaDescargada addObject:estadisticasJugadoAnton];
+          [listaDescargada addObject:estadisticasJugadoCano];
+         [listaDescargada addObject:estadisticasJugadoHugo];
+    
         [listaDescargada addObject:estadisticasJugadoJordan];
-        [listaDescargada addObject:estadisticasJugadoAnton];
-        [listaDescargada addObject:estadisticasJugadoCano];
+           [listaDescargada addObject:estadisticasJugadoJuan];
+      [listaDescargada addObject:estadisticasJugadoJuanma];
         [listaDescargada addObject:estadisticasJugadoMeri];
-        [listaDescargada addObject:estadisticasJugadoHugo];
-        [listaDescargada addObject:estadisticasJugadoJuanma];
-        [listaDescargada addObject:estadisticasJugadoJuan];
+       
+        
+        
         [listaDescargada addObject:estadisticasJugadoInvitado];
         
         
@@ -360,6 +364,7 @@ int golesTotales=0;
 -(void) pulsarBotonActualizar:(id) sender{
     NSLog(@"update");
     
+   
     
     indicador=[[UIActivityIndicatorView alloc]init];
     indicador.center=self.view.center;
@@ -377,8 +382,20 @@ int golesTotales=0;
 
 -(void) pulsarBotonGrafica:(id) sender{
     NSLog(@"grafica");
-     [self mostrarGraficasParse];
+    UIAlertView *alerta=[[UIAlertView alloc]initWithTitle:@"Grafica" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Goles",@"Asistencias", nil];
+    [alerta show];
+    // [self mostrarGraficasParse];
     
+}
+
+#pragma mark -Delegado Alerta
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex==0) {
+        [self mostrarGraficasParse];
+    }
+    else if(buttonIndex==1){
+        [self mostrarGraficasParseAsistencias];
+    }
 }
 
 #pragma mark -Download informatino
@@ -690,6 +707,19 @@ int golesTotales=0;
     [self.navigationController pushViewController:ganados animated:YES];
     
 
+    
+}
+
+-(void) mostrarGraficasParseAsistencias{
+    //NSData *locationCountData = [NSJSONSerialization dataWithJSONObject:locationCount   options:NSJSONWritingPrettyPrinted error:nil];
+    //NSString *locationCountString = [[NSString alloc] initWithData:locationCountData encoding:NSUTF8StringEncoding];
+    
+    
+    
+    HIDWebController *ganados=[[HIDWebController alloc]initWithListaAsistencias:listaDescargada];
+    [self.navigationController pushViewController:ganados animated:YES];
+    
+    
     
 }
 

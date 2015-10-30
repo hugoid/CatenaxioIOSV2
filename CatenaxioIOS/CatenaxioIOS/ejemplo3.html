@@ -14,12 +14,12 @@
             alert(parametro1+parametro2+'hugo');
         }
         
-        function drawChart(abelG,abelD,jordan,anton,cano,meri,hugo,juanma,juan,invitado) {
+        function drawChart(abelG,abelD,jordan,anton,cano,meri,hugo,juanma,juan,invitado,titulo) {
             //alert(abelG+'jj');
             //alert(abelD+'jj');
             
             var data = google.visualization.arrayToDataTable([
-                                                              ['Task', 'Goles'],
+                                                              ['Task', titulo],
                                                               ['abelG',     abelG],
                                                               ['abelD',      abelD],
                                                               ['jordan',  jordan],
@@ -33,7 +33,7 @@
                                                               ]);
                                                               
                                                               var options = {
-                                                                  title: 'Goles %',
+                                                                  title: titulo+' %',
                                                                   pieHole: 0.4,
                                                               };
                                                               

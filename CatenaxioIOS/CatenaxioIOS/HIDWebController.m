@@ -24,6 +24,8 @@ int golesJuanito=0;
 int golesMeri=0;
 static NSMutableArray *listaGoles;
 
+static Boolean mostrarGoles=false;
+
 -(id) initWithGolesAbel:(int) gabel withGolesAnton:(int) ganton withGolesCano:(int) gcano
           withGolesHugo:(int) ghugo withGolesJordan:(int) gjordan withGolesMeri:(int) gmeri
        withGolesJuanito:(int) gjuanito{
@@ -48,6 +50,18 @@ static NSMutableArray *listaGoles;
     if(self=[super init]){
         listaGoles=[[NSMutableArray alloc]init];
         listaGoles=miLista;
+        mostrarGoles=true;
+        
+    }
+    
+    return self;
+}
+
+-(id) initWithListaAsistencias:(NSArray *) miLista{
+    if(self=[super init]){
+        listaGoles=[[NSMutableArray alloc]init];
+        listaGoles=miLista;
+        mostrarGoles=false;
         
     }
     
@@ -94,6 +108,8 @@ static NSMutableArray *listaGoles;
     
     NSString *path;
     NSBundle *thisBundle = [NSBundle mainBundle];
+    
+    
     path = [thisBundle pathForResource:@"ejemplo3" ofType:@"html"];
     NSURL *instructionsURL = [NSURL fileURLWithPath:path];
     [self.web loadRequest:[NSURLRequest requestWithURL:instructionsURL]];
@@ -123,39 +139,51 @@ static NSMutableArray *listaGoles;
     int __block juan=8;
     int __block invitado=0;
     
+    NSString *key=@"Goles";
+    if (!mostrarGoles) {
+        key=@"Asistencias";
+    }
+    
     [listaGoles enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         //
         HIDModeloEstadisticasJugador *jugador=obj;
         if ([jugador.Nombre isEqualToString:@"AbelG"]) {
-            abelG=[jugador.Goles intValue];
+            abelG=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"AbelD"]) {
-            abelD=[jugador.Goles intValue];
+            abelD=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"Jordan"]) {
-            jordan=[jugador.Goles intValue];
+            jordan=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"Anton"]) {
-            anton=[jugador.Goles intValue];
+            anton=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"Cano"]) {
-            cano=[jugador.Goles intValue];
+            cano=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"Meri"]) {
-            meri=[jugador.Goles intValue];
+            meri=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"Hugo"]) {
-            hugo=[jugador.Goles intValue];
+            hugo=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"Juanma"]) {
-            juanma=[jugador.Goles intValue];
+            juanma=[[jugador valueForKey:key] intValue];
         }
         else if ([jugador.Nombre isEqualToString:@"Juan"]) {
-            juan=[jugador.Goles intValue];
+            juan=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"ZInvitado"]) {
+            invitado=[[jugador valueForKey:key] intValue];
         }
     }];
     
-    NSString *peticion=[NSString stringWithFormat:@"drawChart(%d,%d,%d,%d,%d,%d,%d,%d,%d,%d)",abelG,abelD,jordan,anton,cano,meri,hugo,juanma,juan,invitado];
+    NSString *titulo=@"Goles";
+    if (!mostrarGoles) {
+        titulo=@"Asistencias";
+    }
+    NSString *peticion=[NSString stringWithFormat:@"drawChart(%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,'%@')",abelG,abelD,jordan,anton,cano,meri,hugo,juanma,juan,invitado,titulo];
     [self.web stringByEvaluatingJavaScriptFromString:peticion];
   
 

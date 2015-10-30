@@ -16,4 +16,5 @@
        withGolesJuanito:(int) gjuanito ;
 
 -(id) initWithListaGoles:(NSArray *) miLista;
+-(id) initWithListaAsistencias:(NSArray *) miLista;
 @end

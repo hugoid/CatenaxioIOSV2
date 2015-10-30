@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HIDEstadisticas : UITableViewController
+@interface HIDEstadisticas : UITableViewController <UIAlertViewDelegate>
 
 @end
