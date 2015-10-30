@@ -18,7 +18,6 @@
 		214BB9331BE2151900D2B89F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9321BE2151900D2B89F /* CoreLocation.framework */; };
 		214BB9351BE2152700D2B89F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9341BE2152700D2B89F /* QuartzCore.framework */; };
 		214BB9371BE2152D00D2B89F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9361BE2152D00D2B89F /* Security.framework */; };
-		214BB9391BE2153500D2B89F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB9381BE2153500D2B89F /* StoreKit.framework */; };
 		214BB93B1BE2154000D2B89F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB93A1BE2154000D2B89F /* SystemConfiguration.framework */; };
 		214BB93D1BE2154C00D2B89F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB93C1BE2154B00D2B89F /* libz.tbd */; };
 		214BB93F1BE2155300D2B89F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BB93E1BE2155300D2B89F /* libsqlite3.0.tbd */; };
@@ -101,7 +100,6 @@
 		214BB9321BE2151900D2B89F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		214BB9341BE2152700D2B89F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		214BB9361BE2152D00D2B89F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		214BB9381BE2153500D2B89F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		214BB93A1BE2154000D2B89F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		214BB93C1BE2154B00D2B89F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		214BB93E1BE2155300D2B89F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -198,7 +196,6 @@
 				214BB93F1BE2155300D2B89F /* libsqlite3.0.tbd in Frameworks */,
 				214BB93D1BE2154C00D2B89F /* libz.tbd in Frameworks */,
 				214BB93B1BE2154000D2B89F /* SystemConfiguration.framework in Frameworks */,
-				214BB9391BE2153500D2B89F /* StoreKit.framework in Frameworks */,
 				214BB9371BE2152D00D2B89F /* Security.framework in Frameworks */,
 				214BB9351BE2152700D2B89F /* QuartzCore.framework in Frameworks */,
 				214BB9331BE2151900D2B89F /* CoreLocation.framework in Frameworks */,
@@ -310,7 +307,6 @@
 				214BB93E1BE2155300D2B89F /* libsqlite3.0.tbd */,
 				214BB93C1BE2154B00D2B89F /* libz.tbd */,
 				214BB93A1BE2154000D2B89F /* SystemConfiguration.framework */,
-				214BB9381BE2153500D2B89F /* StoreKit.framework */,
 				214BB9361BE2152D00D2B89F /* Security.framework */,
 				214BB9341BE2152700D2B89F /* QuartzCore.framework */,
 				214BB9321BE2151900D2B89F /* CoreLocation.framework */,
@@ -510,6 +506,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Hugo Izquierdo";
 				TargetAttributes = {
+					21A80AAE19D49C7900FFE67D = {
+						DevelopmentTeam = T8EQWL566C;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
 					21A80AC919D49C7A00FFE67D = {
 						TestTargetID = 21A80AAE19D49C7900FFE67D;
 					};
@@ -689,6 +693,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -728,6 +733,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -747,6 +753,7 @@
 			baseConfigurationReference = 22A7962C990D98EEBF947DCE /* Pods-CatenaxioIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CatenaxioIOS",
@@ -755,6 +762,7 @@
 				GCC_PREFIX_HEADER = "CatenaxioIOS/CatenaxioIOS-Prefix.pch";
 				INFOPLIST_FILE = "CatenaxioIOS/CatenaxioIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bbc7a333-5f62-4584-95cd-b44190c09003";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -765,6 +773,7 @@
 			baseConfigurationReference = E01387D92AD6A648849BF64B /* Pods-CatenaxioIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CatenaxioIOS",
@@ -773,6 +782,7 @@
 				GCC_PREFIX_HEADER = "CatenaxioIOS/CatenaxioIOS-Prefix.pch";
 				INFOPLIST_FILE = "CatenaxioIOS/CatenaxioIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bbc7a333-5f62-4584-95cd-b44190c09003";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
