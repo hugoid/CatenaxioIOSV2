@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HIDWebController : UIViewController
+@interface HIDWebController : UIViewController <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *web;
 
 -(id) initWithGolesAbel:(int) gabel withGolesAnton:(int) ganton withGolesCano:(int) gcano
           withGolesHugo:(int) ghugo withGolesJordan:(int) gjordan withGolesMeri:(int) gmeri
        withGolesJuanito:(int) gjuanito ;
+
+-(id) initWithListaGoles:(NSArray *) miLista;
+-(id) initWithListaAsistencias:(NSArray *) miLista;
 @end

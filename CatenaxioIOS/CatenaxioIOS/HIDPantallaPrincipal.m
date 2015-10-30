@@ -15,6 +15,7 @@
 #import "HIDPartidosGanados.h"
 #import "HIDTablaResultadosTableViewController.h"
 #import "HIDTablaConvocatoria.h"
+#import "HIDPartidosResultados.h"
 
 @interface HIDPantallaPrincipal ()
 
@@ -54,8 +55,14 @@
 }
 
 - (IBAction)pushConvocatoria:(id)sender {
-    HIDTablaConvocatoria *tabla=[[HIDTablaConvocatoria alloc]init];
-    [self.navigationController pushViewController:tabla animated:YES];
+    UIAlertView *alerta=[[UIAlertView alloc]initWithTitle:@"Catenaxio"
+                                                  message:@"En construcción. \n Pero vamos que va pa largo..."
+                                                 delegate:nil
+                                        cancelButtonTitle:nil
+                                        otherButtonTitles:@"OK", nil];
+    [alerta show];
+    //HIDTablaConvocatoria *tabla=[[HIDTablaConvocatoria alloc]init];
+    //[self.navigationController pushViewController:tabla animated:YES];
 }
 
 - (IBAction)pushEstadisticas:(id)sender {
@@ -66,14 +73,14 @@
 - (IBAction)pushClasificacion:(id)sender {
     HIDLiga *liga=[[HIDLiga alloc]init];
     //HIDPartidosEmpatados *empatados=[[HIDPartidosEmpatados alloc]init];
-    HIDPartidosGanados *ganados=[[HIDPartidosGanados alloc]init];
-    HIDPartidosPerdidos *perdidos=[[HIDPartidosPerdidos alloc]init];
+    //HIDPartidosGanados *ganados=[[HIDPartidosGanados alloc]init];
+    //HIDPartidosPerdidos *perdidos=[[HIDPartidosPerdidos alloc]init];
     //HIDTablaResultadosTableViewController *resultados=[[HIDTablaResultadosTableViewController alloc]init];
    // UINavigationBar *bar=[[UINavigationBar alloc]init];
-    
+    HIDPartidosResultados *resultado=[[HIDPartidosResultados alloc]init];
    
     UITabBarController *tab=[[UITabBarController alloc]init];
-    tab.viewControllers=@[liga,ganados];
+    tab.viewControllers=@[liga,resultado];
     [self.navigationController pushViewController:tab animated:YES];
     
 }

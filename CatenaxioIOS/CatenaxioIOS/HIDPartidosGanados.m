@@ -47,11 +47,43 @@
     //[self.navigationItem setRightBarButtonItems:@[botonDescargar] animated:YES];
     //[self.tabBarController.navigationItem setRightBarButtonItem:botonDescargar];
 
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"ejemplo2" ofType:@"html"];
+    /*NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"ejemplo2" ofType:@"html"];
     NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     [self.visorWeb loadHTMLString:htmlString baseURL:nil];
     
+    NSString *str = [NSString   stringWithFormat:@"testFunction()"];
+    [self.visorWeb stringByEvaluatingJavaScriptFromString: str];*/
+    
+    NSString *path;
+    NSBundle *thisBundle = [NSBundle mainBundle];
+    path = [thisBundle pathForResource:@"ejemplo3" ofType:@"html"];
+    NSURL *instructionsURL = [NSURL fileURLWithPath:path];
+    [self.visorWeb loadRequest:[NSURLRequest requestWithURL:instructionsURL]];
+    
+   // NSString * jsCallBack = [NSString stringWithFormat:@"myFunction()"];
+    //[self.visorWeb stringByEvaluatingJavaScriptFromString:jsCallBack];
+    
+    //[self.visorWeb stringByEvaluatingJavaScriptFromString:@"myFunction()"];
+    self.visorWeb.delegate=self;
 
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSLog(@"jeje");
+    NSString *mipeticionPrueba=[NSString stringWithFormat:@"myFunction2('%@','%@')",@"hola",@"xx"];
+    [self.visorWeb stringByEvaluatingJavaScriptFromString:mipeticionPrueba];
+    int abelG=20;
+    int abelD=1;
+    int jordan=2;
+    int anton=3;
+    int cano=4;
+    int meri=5;
+    int hugo=6;
+    int juanma=7;
+    int juan=8;
+    int invitado=0;
+    NSString *peticion=[NSString stringWithFormat:@"drawChart(%d,%d,%d,%d,%d,%d,%d,%d,%d,%d)",abelG,abelD,jordan,anton,cano,meri,hugo,juanma,juan,invitado];
+    [self.visorWeb stringByEvaluatingJavaScriptFromString:peticion];
+    //[self.visorWeb stringByEvaluatingJavaScriptFromString:@"drawChart2()"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,6 +10,9 @@
 #import "HIDObjetoEstadisticas.h"
 #import "HIDCeldaEstadisticaCell.h"
 #import "HIDWebController.h"
+#import <Parse/Parse.h>
+#import "HIDModeloEstadisticasJugador.h"
+#import "HIDPartidosGanados.h"
 @interface HIDEstadisticas ()
 
 @end
@@ -17,6 +20,7 @@
 @implementation HIDEstadisticas
 
 NSMutableArray *celdasEstadisticas;
+NSMutableArray *listaDescargada;
 HIDObjetoEstadisticas *abel;
 HIDObjetoEstadisticas *anton;
 HIDObjetoEstadisticas *cano;
@@ -28,12 +32,65 @@ HIDObjetoEstadisticas *fer;
 HIDObjetoEstadisticas *abelD;
 HIDObjetoEstadisticas *juanma;
 UIActivityIndicatorView *indicador;
+int golesTotales=0;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
+         NSError* err = nil;
+        NSString *stringAbelD=@"{\"Nombre\":\"AbelD\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadorAbelD=[[HIDModeloEstadisticasJugador alloc]initWithString:stringAbelD error:&err];
         
+        NSString *stringAbel=@"{\"Nombre\":\"AbelG\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+       
+        HIDModeloEstadisticasJugador *estadisticasJugadorAbel=[[HIDModeloEstadisticasJugador alloc]initWithString:stringAbel error:&err];
+        
+        
+        
+        NSString *stringJordan=@"{\"Nombre\":\"Jordan\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoJordan=[[HIDModeloEstadisticasJugador alloc]initWithString:stringJordan error:&err];
+        
+        NSString *stringAnton=@"{\"Nombre\":\"Anton\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoAnton=[[HIDModeloEstadisticasJugador alloc]initWithString:stringAnton error:&err];
+        
+        NSString *stringCano=@"{\"Nombre\":\"Cano\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoCano=[[HIDModeloEstadisticasJugador alloc]initWithString:stringCano error:&err];
+        
+        NSString *stringMeri=@"{\"Nombre\":\"Meri\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoMeri=[[HIDModeloEstadisticasJugador alloc]initWithString:stringMeri error:&err];
+        
+        NSString *stringHugo=@"{\"Nombre\":\"Hugo\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoHugo=[[HIDModeloEstadisticasJugador alloc]initWithString:stringHugo error:&err];
+        
+        NSString *stringJuanma=@"{\"Nombre\":\"Juanma\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoJuanma=[[HIDModeloEstadisticasJugador alloc]initWithString:stringJuanma error:&err];
+        
+        NSString *stringJuan=@"{\"Nombre\":\"Juan\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoJuan=[[HIDModeloEstadisticasJugador alloc]initWithString:stringJuan error:&err];
+        
+        NSString *stringInvitado=@"{\"Nombre\":\"ZInvitado\",\"PT\":0,\"PJ\":0,\"PG\":0,\"Goles\":0,\"Asistencias\":0}";
+        HIDModeloEstadisticasJugador *estadisticasJugadoInvitado=[[HIDModeloEstadisticasJugador alloc]initWithString:stringInvitado error:&err];
+        
+        listaDescargada=[[NSMutableArray alloc]init];
+        [listaDescargada addObject:estadisticasJugadorAbelD];
+        [listaDescargada addObject:estadisticasJugadorAbel];
+         [listaDescargada addObject:estadisticasJugadoAnton];
+          [listaDescargada addObject:estadisticasJugadoCano];
+         [listaDescargada addObject:estadisticasJugadoHugo];
+    
+        [listaDescargada addObject:estadisticasJugadoJordan];
+           [listaDescargada addObject:estadisticasJugadoJuan];
+      [listaDescargada addObject:estadisticasJugadoJuanma];
+        [listaDescargada addObject:estadisticasJugadoMeri];
+       
+        
+        
+        [listaDescargada addObject:estadisticasJugadoInvitado];
+        
+        
+        
+        /*
         celdasEstadisticas=[[NSMutableArray alloc]initWithCapacity:8];
         
         //abel
@@ -45,6 +102,7 @@ UIActivityIndicatorView *indicador;
                                                  withGoles:@"0"
                                             withPorcentaje:@"0"
                                             withAsistencia:@"0"];
+       
         [celdasEstadisticas addObject:abel];
         
         anton=[[HIDObjetoEstadisticas alloc]initWithJugador:[UIImage imageNamed:@"anton"]
@@ -126,7 +184,7 @@ UIActivityIndicatorView *indicador;
                                                   withGoles:@"0"
                                              withPorcentaje:@"0"
                                              withAsistencia:@"0"];
-        [celdasEstadisticas addObject:juanma];
+        [celdasEstadisticas addObject:juanma];*/
     
     }
     return self;
@@ -145,6 +203,8 @@ UIActivityIndicatorView *indicador;
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    
+    golesTotales=0;
     
     //configuracion de la tabla
     [self.navigationController setNavigationBarHidden:NO];
@@ -199,7 +259,7 @@ UIActivityIndicatorView *indicador;
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [celdasEstadisticas count];
+    return [listaDescargada count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -209,7 +269,7 @@ UIActivityIndicatorView *indicador;
         cell=[[HIDCeldaEstadisticaCell alloc]init];
     }
     
-    cell.labelPartidosTotales.text=[[celdasEstadisticas objectAtIndex:indexPath.row] totales2];
+    /*cell.labelPartidosTotales.text=[[celdasEstadisticas objectAtIndex:indexPath.row] totales2];
     cell.labelPartidosJugados.text=[[celdasEstadisticas objectAtIndex:indexPath.row] jugados2];
     cell.labelPartidosGanados.text=[[celdasEstadisticas objectAtIndex:indexPath.row] ganados2];
     cell.labelGoles.text=[[celdasEstadisticas objectAtIndex:indexPath.row] goles2];
@@ -218,12 +278,28 @@ UIActivityIndicatorView *indicador;
     
     UIImageView *imagen=[[UIImageView alloc]initWithImage:[[celdasEstadisticas objectAtIndex:indexPath.row] jugador2]];
     
-    cell.imagenPhoto.image=imagen.image;
+    cell.imagenPhoto.image=imagen.image;*/
     
     
+    cell.labelPartidosTotales.text=[NSString stringWithFormat:@"%@",[[listaDescargada objectAtIndex:indexPath.row] PT]];
+    cell.labelPartidosJugados.text=[NSString stringWithFormat:@"%@",[[listaDescargada objectAtIndex:indexPath.row] PJ]];
+     cell.labelPartidosGanados.text=[NSString stringWithFormat:@"%@",[[listaDescargada objectAtIndex:indexPath.row] PG]];
+    cell.labelGoles.text=[NSString stringWithFormat:@"%@",[[listaDescargada objectAtIndex:indexPath.row] Goles]];
+    cell.labelAsistencias.text=[NSString stringWithFormat:@"%@",[[listaDescargada objectAtIndex:indexPath.row] Asistencias]];
+    cell.labelPorcentajeGoles.text=@"xx";
     
+    UIImage *imagen=[self obtenerImagen:[[listaDescargada objectAtIndex:indexPath.row] Nombre]];
+    [cell.imagenPhoto setImage:imagen];
     
-    
+    //calculo el porcentaje de goles
+    float golesJugador=[[[listaDescargada objectAtIndex:indexPath.row] Goles] floatValue];
+    if (golesTotales!=0) {
+        float porcentaje=golesJugador/golesTotales*100;
+        cell.labelPorcentajeGoles.text=[NSString stringWithFormat:@"%.0f",porcentaje];
+    }
+    else{
+        cell.labelPorcentajeGoles.text=@"0";
+    }
     
     // Configure the cell...
     
@@ -288,6 +364,7 @@ UIActivityIndicatorView *indicador;
 -(void) pulsarBotonActualizar:(id) sender{
     NSLog(@"update");
     
+   
     
     indicador=[[UIActivityIndicatorView alloc]init];
     indicador.center=self.view.center;
@@ -298,14 +375,27 @@ UIActivityIndicatorView *indicador;
     [indicador startAnimating];
     
     
-    [self descargarInformacion];
+    //[self descargarInformacion];
+    [self descargarInformacionParse];
     
 }
 
 -(void) pulsarBotonGrafica:(id) sender{
     NSLog(@"grafica");
-     [self mostrarGrafica];
+    UIAlertView *alerta=[[UIAlertView alloc]initWithTitle:@"Grafica" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Goles",@"Asistencias", nil];
+    [alerta show];
+    // [self mostrarGraficasParse];
     
+}
+
+#pragma mark -Delegado Alerta
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex==0) {
+        [self mostrarGraficasParse];
+    }
+    else if(buttonIndex==1){
+        [self mostrarGraficasParseAsistencias];
+    }
 }
 
 #pragma mark -Download informatino
@@ -420,6 +510,80 @@ UIActivityIndicatorView *indicador;
     
 }
 
+-(void) descargarInformacionParse{
+    PFQuery *query=[PFQuery queryWithClassName:@"Jugadores"];
+    [query orderByAscending:@"Nombre"];
+   
+    [query
+     findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+         //
+         if (!error) {
+             NSLog(@"Dscargo %@",objects);
+             //
+            
+             NSMutableArray *listaModeloParseado=[[NSMutableArray alloc]init];
+             [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                 //ç
+                 NSError* err = nil;
+                 PFObject *objetoParse=obj;
+                 
+                 //NSString *mensaje=[NSString stringWithFormat:@"%@",objetoParse]);
+                 NSArray *keys=[objetoParse allKeys];
+                 NSString __block *mensajeJSON;
+                 NSMutableString __block *mensajeJSONTotal=[[NSMutableString alloc]init];
+                 [keys enumerateObjectsUsingBlock:^(id  _Nonnull objKey, NSUInteger idx, BOOL * _Nonnull stop) {
+                     if (idx==0) {
+                         if ([objKey isEqualToString:@"Nombre"]) {
+                             mensajeJSON=[NSString stringWithFormat:@"{\"%@\":\"%@\",",objKey,[objetoParse valueForKey:objKey]];
+                         }
+                         else{
+                             mensajeJSON=[NSString stringWithFormat:@"{\"%@\":%@,",objKey,[objetoParse valueForKey:objKey]];
+                         }
+                         
+                     }
+                     else{
+                          if ([objKey isEqualToString:@"Nombre"]) {
+                              mensajeJSON=[NSString stringWithFormat:@"\"%@\":\"%@\",",objKey,[objetoParse valueForKey:objKey]];
+                          }
+                          else{
+                              mensajeJSON=[NSString stringWithFormat:@"\"%@\":%@,",objKey,[objetoParse valueForKey:objKey]];
+                          }
+                         
+                     }
+                     [mensajeJSONTotal appendString:mensajeJSON];
+                 }];
+                 [mensajeJSONTotal appendString:@"}"];
+                 HIDModeloEstadisticasJugador *estadisticasJugador=[[HIDModeloEstadisticasJugador alloc]initWithString:mensajeJSONTotal error:&err];
+                 [listaModeloParseado addObject:estadisticasJugador];
+             }];
+             int __block goles=0;
+             [listaModeloParseado enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                 //
+                 HIDModeloEstadisticasJugador *jugador=obj;
+                 goles=goles+[jugador.Goles integerValue];
+                 golesTotales=goles;
+             }];
+             
+             NSLog(@"mi array es %@",listaModeloParseado);
+             listaDescargada=[[NSMutableArray alloc]init];
+             listaDescargada=listaModeloParseado;
+             [self.tableView reloadData];
+             
+             UIAlertView *alerta=[[UIAlertView alloc]initWithTitle:@"Estadisticas"
+                                                           message:@"Datos Actualizados"
+                                                          delegate:nil
+                                                 cancelButtonTitle:nil
+                                                 otherButtonTitles:@"OK", nil];
+             [alerta show];
+             [indicador stopAnimating];
+             
+         }
+         else{
+             NSLog(@"error");
+         }
+     }];
+}
+
 -(void) mostrarGrafica{
     
     NSString *link =
@@ -531,6 +695,68 @@ UIActivityIndicatorView *indicador;
     
     
    
+}
+
+-(void) mostrarGraficasParse{
+    //NSData *locationCountData = [NSJSONSerialization dataWithJSONObject:locationCount   options:NSJSONWritingPrettyPrinted error:nil];
+    //NSString *locationCountString = [[NSString alloc] initWithData:locationCountData encoding:NSUTF8StringEncoding];
+    
+  
+   
+    HIDWebController *ganados=[[HIDWebController alloc]initWithListaGoles:listaDescargada];
+    [self.navigationController pushViewController:ganados animated:YES];
+    
+
+    
+}
+
+-(void) mostrarGraficasParseAsistencias{
+    //NSData *locationCountData = [NSJSONSerialization dataWithJSONObject:locationCount   options:NSJSONWritingPrettyPrinted error:nil];
+    //NSString *locationCountString = [[NSString alloc] initWithData:locationCountData encoding:NSUTF8StringEncoding];
+    
+    
+    
+    HIDWebController *ganados=[[HIDWebController alloc]initWithListaAsistencias:listaDescargada];
+    [self.navigationController pushViewController:ganados animated:YES];
+    
+    
+    
+}
+
+-(UIImage *) obtenerImagen:(NSString *) nombre{
+    if ([nombre isEqualToString:@"AbelG"]) {
+        return [UIImage imageNamed:@"abel"];
+    }
+    else if([nombre isEqualToString:@"AbelD"]) {
+        return [UIImage imageNamed:@"abelD"];
+    }
+    else if([nombre isEqualToString:@"Jordan"]) {
+        return [UIImage imageNamed:@"jordan"];
+    }
+    else if([nombre isEqualToString:@"Anton"]) {
+        return [UIImage imageNamed:@"anton"];
+    }
+    else if([nombre isEqualToString:@"Cano"]) {
+        return [UIImage imageNamed:@"hector"];
+    }
+    else if([nombre isEqualToString:@"Meri"]) {
+        return [UIImage imageNamed:@"meri"];
+    }
+    else if([nombre isEqualToString:@"Hugo"]) {
+        return [UIImage imageNamed:@"hugo3"];
+    }
+    else if([nombre isEqualToString:@"Juanma"]) {
+        return [UIImage imageNamed:@"juanma"];
+    }
+    else if([nombre isEqualToString:@"Juan"]) {
+        return [UIImage imageNamed:@"juanito"];
+    }
+    else if([nombre isEqualToString:@"ZInvitado"]) {
+        return [UIImage imageNamed:@"fer"];
+    }
+    else{
+    return [UIImage imageNamed:@"hugo3"];
+    }
 }
 
 @end

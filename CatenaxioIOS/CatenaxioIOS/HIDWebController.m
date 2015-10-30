@@ -7,6 +7,7 @@
 //
 
 #import "HIDWebController.h"
+#import "HIDModeloEstadisticasJugador.h"
 
 @interface HIDWebController ()
 
@@ -21,7 +22,9 @@ int golesHugo=0;
 int golesJordan=0;
 int golesJuanito=0;
 int golesMeri=0;
+static NSMutableArray *listaGoles;
 
+static Boolean mostrarGoles=false;
 
 -(id) initWithGolesAbel:(int) gabel withGolesAnton:(int) ganton withGolesCano:(int) gcano
           withGolesHugo:(int) ghugo withGolesJordan:(int) gjordan withGolesMeri:(int) gmeri
@@ -43,6 +46,28 @@ int golesMeri=0;
     
 }
 
+-(id) initWithListaGoles:(NSArray *) miLista{
+    if(self=[super init]){
+        listaGoles=[[NSMutableArray alloc]init];
+        listaGoles=miLista;
+        mostrarGoles=true;
+        
+    }
+    
+    return self;
+}
+
+-(id) initWithListaAsistencias:(NSArray *) miLista{
+    if(self=[super init]){
+        listaGoles=[[NSMutableArray alloc]init];
+        listaGoles=miLista;
+        mostrarGoles=false;
+        
+    }
+    
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -56,7 +81,8 @@ int golesMeri=0;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSString *fullURL = @"http://hidandroid.hol.es/catenaxio/chart_goles.html?";
+    //version anterior
+    /*NSString *fullURL = @"http://hidandroid.hol.es/catenaxio/chart_goles.html?";
     NSURL *url = [NSURL URLWithString:fullURL];
     
     
@@ -74,7 +100,94 @@ int golesMeri=0;
     
      NSURL *urltotal = [NSURL URLWithString:stringTotal];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:urltotal];
-    [self.web loadRequest:requestObj];
+    [self.web loadRequest:requestObj];*/
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    //version nueva del java script
+    
+    NSString *path;
+    NSBundle *thisBundle = [NSBundle mainBundle];
+    
+    
+    path = [thisBundle pathForResource:@"ejemplo3" ofType:@"html"];
+    NSURL *instructionsURL = [NSURL fileURLWithPath:path];
+    [self.web loadRequest:[NSURLRequest requestWithURL:instructionsURL]];
+    
+    // NSString * jsCallBack = [NSString stringWithFormat:@"myFunction()"];
+    //[self.visorWeb stringByEvaluatingJavaScriptFromString:jsCallBack];
+    
+    //[self.visorWeb stringByEvaluatingJavaScriptFromString:@"myFunction()"];
+    self.web.delegate=self;
+    [self.web setScalesPageToFit:true];
+    
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    //NSString *mipeticionPrueba=[NSString stringWithFormat:@"myFunction2('%@','%@')",@"hola",@"xx"];
+    //[self.web stringByEvaluatingJavaScriptFromString:mipeticionPrueba];
+    
+    
+    int __block abelG=20;
+    int __block abelD=1;
+    int __block jordan=2;
+    int __block anton=3;
+    int __block cano=4;
+    int __block meri=5;
+    int __block hugo=6;
+    int __block juanma=7;
+    int __block juan=8;
+    int __block invitado=0;
+    
+    NSString *key=@"Goles";
+    if (!mostrarGoles) {
+        key=@"Asistencias";
+    }
+    
+    [listaGoles enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        //
+        HIDModeloEstadisticasJugador *jugador=obj;
+        if ([jugador.Nombre isEqualToString:@"AbelG"]) {
+            abelG=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"AbelD"]) {
+            abelD=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"Jordan"]) {
+            jordan=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"Anton"]) {
+            anton=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"Cano"]) {
+            cano=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"Meri"]) {
+            meri=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"Hugo"]) {
+            hugo=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"Juanma"]) {
+            juanma=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"Juan"]) {
+            juan=[[jugador valueForKey:key] intValue];
+        }
+        else if ([jugador.Nombre isEqualToString:@"ZInvitado"]) {
+            invitado=[[jugador valueForKey:key] intValue];
+        }
+    }];
+    
+    NSString *titulo=@"Goles";
+    if (!mostrarGoles) {
+        titulo=@"Asistencias";
+    }
+    NSString *peticion=[NSString stringWithFormat:@"drawChart(%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,'%@')",abelG,abelD,jordan,anton,cano,meri,hugo,juanma,juan,invitado,titulo];
+    [self.web stringByEvaluatingJavaScriptFromString:peticion];
+  
+
+    
 }
 
 - (void)didReceiveMemoryWarning
